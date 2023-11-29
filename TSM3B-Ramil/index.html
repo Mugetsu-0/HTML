@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header with simple animation</title>
+    
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            box-shadow: 0 0 5px rgba(red, green, blue);
+            
+        }
+        .logo h1{
+            /* text-align: center; */
+            
+        }
+        .logo img{
+            height: 20px;
+
+        }
+        .logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            
+        }
+        nav a{
+            text-decoration: none;
+            color: inherit;
+            font-size: 25px;
+            position: relative;
+            padding: 10px 15px;
+        }
+
+        nav a::after{
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: black;
+            transform: scaleX(0);
+            transition: 0.7s transform cubic-bezier(0.06, 0.9, 0.28, 1);
+        }
+        nav a:hover::after{
+            transform: scaleX(1);           
+        }
+        
+        .box{
+            background-color: aqua;
+            display: flex;
+            padding: 10px;
+            align-items: center;
+            justify-content: space-around;
+            min-width: 200px;
+            max-width: 800px;
+            gap: 10px;
+            border-radius: 10px;
+            flex-direction: row;
+            flex: 400px ;
+        }
+        .box img{
+            height: 100px;
+            background-color: bisque;
+            border-radius: 100%;
+            padding: 20px;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;  
+            justify-content: space-between;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>HOTEL</h1>
+            <img src="https://cdn-icons-png.flaticon.com/512/201/201426.png" alt="hotel">
+
+        </div>
+        <nav>
+            <a href="float.html">Home</a>
+            <a href="">About</a>
+            <a href="">Contacts</a>
+            <a href="">Services</a>
+        </nav>
+    </header>
+    <main>
+        <div class="box">
+            <img src="https://cdn-icons-png.flaticon.com/512/201/201426.png" alt="hotel">
+            <h1>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio vel recusandae praesentium quisquam, labore sunt sequi impedit nesciunt, quidem consectetur ipsum blanditiis totam minima mollitia enim pariatur molestiae soluta animi!
+            </h1>
+        </div>
+        <div class="box">
+            <img src="https://cdn-icons-png.flaticon.com/512/201/201426.png" alt="hotel">
+            <h1>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio vel recusandae praesentium quisquam, labore sunt sequi impedit nesciunt, quidem consectetur ipsum blanditiis totam minima mollitia enim pariatur molestiae soluta animi!
+            </h1>
+        </div>
+        <div class="box">
+            <img src="https://cdn-icons-png.flaticon.com/512/201/201426.png" alt="hotel">
+            <h1>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio vel recusandae praesentium quisquam, labore sunt sequi impedit nesciunt, quidem consectetur ipsum blanditiis totam minima mollitia enim pariatur molestiae soluta animi!
+            </h1>
+        </div>
+    </main>
+</body>
+</html>
