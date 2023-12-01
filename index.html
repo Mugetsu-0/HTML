@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>header with simple animation</title>
+    
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            height: 100%;
+        }
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #ffefe8;
+            flex-direction: column;
+            display: flex;
+            min-height: 100%;
+        }
+        header{
+            box-shadow: 0 0 5px rgba(red, green, blue);
+            
+        }
+        h1{
+            cursor: pointer;
+        }
+        .logo h1{
+            /* text-align: center; */
+            
+        }
+        .logo img{
+            height: 20px;
+
+        }
+        .logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-color: black;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        nav a{
+            text-decoration: none;
+            color: inherit;
+            font-size: 25px;
+            position: relative;
+            padding: 10px 15px;
+        }
+
+        nav a::after{
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: black;
+            transform: scaleX(0);
+            transition: 0.7s transform cubic-bezier(0.06, 0.9, 0.28, 1);
+        }
+        nav a:hover::after{
+            transform: scaleX(1);           
+        }
+        
+        
+        main{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .card{
+            padding-top: 40px;
+            padding-bottom: 20px;
+        }
+        .card-pokemon{
+            background-color: antiquewhite;
+            box-shadow: -1px 15px 30px 12px black;
+            position: relative;
+            border-radius: 15px;
+            text-align:center;
+            width: 250px;
+        }
+    .card-pokemon_image{
+        height: 100px;
+        margin-bottom: 20px;
+        position: relative;
+        background: url(https://thumbs.dreamstime.com/b/yellow-gradient-plain-background-yellow-gradient-plain-background-image-layering-text-image-125910746.jpg);
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+
+    }
+    .card-pokemon_image .pokemon{
+        width: 150px;
+        position: absolute;
+        top: -50px;
+        left: 50px;
+        -webkit-transition-property: all;
+        -webkit-transition-duration: 0.5s;
+        -webkit-transition-timing-function: ease;
+    }
+    .type{
+        
+        font-style: italic;
+        
+    }
+    .card-pokemon > h3{
+        font: 20px;
+        color: black;
+    }
+    .card-pokemon > p{
+        font-size: 14px;
+        padding: 10px 15px 15px 15px;
+    }
+    .pokemon:hover{
+        transform: scale(1.2)
+    }
+
+    .card-pokemon_image1{
+        height: 100px;
+        margin-bottom: 20px;
+        position: relative;
+        background: url(https://t3.ftcdn.net/jpg/04/06/90/44/360_F_406904452_C1NlUmGF5C8OuXY8uk573XlEWQP13gS6.jpg);
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+
+    }
+    .card-pokemon_image1 .pokemon{
+        width: 150px;
+        position: absolute;
+        top: -50px;
+        left: 50px;
+        -webkit-transition-property: all;
+        -webkit-transition-duration: 0.5s;
+        -webkit-transition-timing-function: ease;
+    }
+
+    .card-pokemon_image2{
+        height: 100px;
+        margin-bottom: 20px;
+        position: relative;
+        background: url(https://media.istockphoto.com/id/1350643908/photo/orange-paper-top-view-abstract-bright-background-without-texture.jpg?s=612x612&w=0&k=20&c=AP1RcFrQOy9qSxtmu34kmCMjYgrgsoCfINptAVtILnE=);
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+
+    }
+    .card-pokemon_image2 .pokemon{
+        width: 150px;
+        position: absolute;
+        top: -50px;
+        left: 50px;
+        -webkit-transition-property: all;
+        -webkit-transition-duration: 0.5s;
+        -webkit-transition-timing-function: ease;
+    }
+
+    .card-pokemon_image3{
+        height: 100px;
+        margin-bottom: 20px;
+        position: relative;
+        background: url(https://i.pinimg.com/736x/46/9a/fd/469afdfd611e73576c7f852442cf2c4c.jpg);
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+
+    }
+    .card-pokemon_image3 .pokemon{
+        width: 150px;
+        position: absolute;
+        top: -50px;
+        left: 50px;
+        -webkit-transition-property: all;
+        -webkit-transition-duration: 0.5s;
+        -webkit-transition-timing-function: ease;
+    }
+
+    footer{
+        background-color: black;
+        color: white;
+        display: flex;
+        height: 75px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin-top: auto;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/287/287221.png" alt="poke">
+            <h1>POKEMON</h1>
+            <img src="https://cdn-icons-png.flaticon.com/512/287/287221.png" alt="poke">
+
+        </div>
+        <nav>
+            <a href="float.html">Home</a>
+            <a href="">About</a>
+            <a href="">Contacts</a>
+            <a href="">Services</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="card">
+            <div class="card-pokemon">
+                <div class="card-pokemon_image">
+                    <img class="pokemon" src="https://cdn-icons-png.flaticon.com/512/528/528098.png" alt="">
+                </div>
+                <div class="type">Fire</div>
+                <h3>PIKACHU</h3>
+                <p>pika</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-pokemon">
+                <div class="card-pokemon_image1">
+                    <img class="pokemon" src="https://cdn-icons-png.flaticon.com/512/189/189001.png" alt="">
+                </div>
+                <div class="type">NORMAL</div>
+                <h3>SNORLAX</h3>
+                <p>pika</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-pokemon">
+                <div class="card-pokemon_image2">
+                    <img class="pokemon" src="https://cdn-icons-png.flaticon.com/512/189/189000.png" alt="">
+                </div>
+                <div class="type">NORMAL</div>
+                <h3>PSYDUCK</h3>
+                <p>pika</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-pokemon">
+                <div class="card-pokemon_image3">
+                    <img class="pokemon" src="https://cdn-icons-png.flaticon.com/512/188/188997.png" alt="">
+                </div>
+                <div class="type">NORMAL</div>
+                <h3>MEOWTH</h3>
+                <p>pika</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="copyright">Copyright &copy; 2023 - Web Development</div>
+    </footer>
+</body>
+</html>
