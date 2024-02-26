@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    font-family: "Poppins";
+    background: color #6435a5;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    box-shadow: 0 0 2px #333;
+    background-color:#ffd1ea;
+}
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo h1 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+/* Navigation */
+nav {
+    font-size: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 20;
+    font-weight: bold;
+    color: #371f76;
+    position: relative;
+    padding: 40px;
+}
+
+nav a::after {
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: white;
+    /* animation */
+    transform: scaleX(0);
+    transition: 0.7s transform cubic-bezier(0.06, 0.9, 0.28, 1);
+}
+
+nav a:hover::after {
+    transform: scaleX(1.2);
+}
+
+/* Main Content */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.card {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    display: inline-block;
+}
+
+.card-food {
+    background:pink;
+    box-shadow: -1px 15px 30px -12px violet;
+    width: 250px;
+    position: relative;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card-food_image {
+    background: url('https://img.freepik.com/premium-photo/blurred-colorful-wallpaper-background_976742-179.jpg');
+    height: 100px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.card-food_image .food {
+    width: 150px;
+    position: absolute;
+    top: -50px;
+    left: 50px;
+    -webkit-transition-property: all; 
+    -webkit-transition-duration: 0.5s; 
+    -webkit-transition-timing-function: ease; 
+}
+
+.food:hover {
+    transform: scale(2);
+}
+
+.category {
+    font-family: 'Times New Roman';
+    font-style: italic;
+    color: black;
+}
+
+.card-food h2 {
+    font-size: 25px;
+    color: #371f76;
+}
+
+.card-food p {
+    padding: 10px 0 15px 0;
+    font-size:0.8rem;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+}
+body{
+    background-image: url(moon.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
